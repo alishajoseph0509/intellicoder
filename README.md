@@ -22,6 +22,16 @@ Built with LangChain, LangGraph, Pydantic structured outputs and Groq (gpt-oss).
 
 Open `examples/<app>/index.html` in a browser to try them.
 
+### Screenshots
+
+**Calculator**
+
+![Calculator](examples/screenshots/calculator.png)
+
+**To-do app**
+
+![To-do app](examples/screenshots/todo-app.png)
+
 ## Run it yourself
 
 1. Install [uv](https://docs.astral.sh/uv/) and run `uv sync`
