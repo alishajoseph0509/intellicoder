@@ -32,6 +32,8 @@ Open `examples/<app>/index.html` in a browser to try them.
 
 ![To-do app](examples/screenshots/todo-app.png)
 
+**Live demos:** [Calculator](https://alishajoseph0509.github.io/intellicoder/examples/calculator/) · [To-do app](https://alishajoseph0509.github.io/intellicoder/examples/todo-app/)
+
 ## Run it yourself
 
 1. Install [uv](https://docs.astral.sh/uv/) and run `uv sync`
@@ -49,3 +51,4 @@ Open `examples/<app>/index.html` in a browser to try them.
 ## Credits
 
 Based on a tutorial project by codebasics, extended with the improvements above.
+
