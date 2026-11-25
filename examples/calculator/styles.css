@@ -1,0 +1,159 @@
+/* styles.css */
+
+/* Root variables for easy theming */
+:root {
+  --bg-color: #f0f4f8;
+  --calc-bg: #ffffff;
+  --button-bg: #e0e7ef;
+  --button-hover: #cbd5e1;
+  --button-active: #b0b8c1;
+  --operator-bg: #ffb74d;
+  --operator-hover: #ffa726;
+  --operator-active: #fb8c00;
+  --display-bg: #212121;
+  --display-color: #ffffff;
+  --font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Global reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body layout */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-color);
+  font-family: var(--font-family);
+}
+
+/* Calculator container */
+.calculator {
+  background: var(--calc-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  max-width: 90vw;
+  overflow: hidden;
+}
+
+/* Display */
+.display {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: var(--display-bg);
+  color: var(--display-color);
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+/* Button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Common button style */
+button {
+  border: none;
+  background: var(--button-bg);
+  font-size: 1.25rem;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Operator buttons */
+button.operator {
+  background: var(--operator-bg);
+}
+
+/* Hover & active states */
+button:hover {
+  background: var(--button-hover);
+}
+button.operator:hover {
+  background: var(--operator-hover);
+}
+button:active {
+  background: var(--button-active);
+}
+button.operator:active {
+  background: var(--operator-active);
+}
+
+/* Special buttons */
+button.clear {
+  grid-column: span 2;
+  background: #ef5350;
+  color: #fff;
+}
+button.clear:hover {
+  background: #e53935;
+}
+button.clear:active {
+  background: #c62828;
+}
+button.equal {
+  grid-row: span 2;
+  background: #66bb6a;
+  color: #fff;
+}
+button.equal:hover {
+  background: #4caf50;
+}
+button.equal:active {
+  background: #388e3c;
+}
+/* Match the class names used in index.html */
+button.op {
+  background: var(--operator-bg);
+}
+button.op:hover {
+  background: var(--operator-hover);
+}
+button.op:active {
+  background: var(--operator-active);
+}
+button.func {
+  background: #ef5350;
+  color: #fff;
+}
+button.func:hover {
+  background: #e53935;
+}
+button.eq {
+  grid-row: span 2;
+  background: #66bb6a;
+  color: #fff;
+}
+button.eq:hover {
+  background: #4caf50;
+}
+button.zero {
+  grid-column: span 2;
+}
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .calculator {
+    width: 100%;
+    border-radius: 0;
+  }
+  .display {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+  button {
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+}
